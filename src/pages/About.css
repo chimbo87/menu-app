@@ -1,0 +1,25 @@
+#aboutText{
+    padding: 10px;
+}
+#aboutText h4{
+    text-align: center;
+    font-weight: 700;
+}
+#aboutImg{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+#theAccordion{
+    margin-top: 50px;
+    background-color: rgba(198, 195, 195, 0.153);
+    border-radius: 4px;
+}
+
+#theAccordion h4{
+    text-align: center;
+    font-weight: 700;
+}
+.accordion-button{
+    background-color: rgba(198, 195, 195, 0.153);
+}
