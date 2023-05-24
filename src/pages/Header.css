@@ -2,5 +2,25 @@
     margin: 0px 10px;
     
 }
+#logoBox{
+    border: 3px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+#logoBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#navbtn button{
+   border: 1px solid grey;
+   border-radius: 4px;
+   padding: 8px 40px;
+   margin: 0px 5px;
+   font-weight: 500;
+}
+
 
 

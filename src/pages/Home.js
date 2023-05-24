@@ -16,29 +16,32 @@ function Home() {
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src={home01} class="d-block w-100" alt="..." id="homeImg" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
+                        <div class="carousel-caption d-none d-md-block" id="homeTxt">
+                            <h5>Restaurant and Bar</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
                                  but the majority have suffered alteration in some form, by injected humour,
                                  or randomised words which don't look even slightly believable. </p>
+                                 <button>Our Menu</button>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
                         <img src={home02} class="d-block w-100" alt="..." id="homeImg" />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block"id="homeTxt">
                             <h5>Second slide label</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
                                  but the majority have suffered alteration in some form, by injected humour,
                                  or randomised words which don't look even slightly believable. </p>
+                                 <button>Book a table</button>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src={home03} class="d-block w-100" alt="..." id="homeImg" />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-none d-md-block"id="homeTxt">
                             <h5>Third slide label</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
                                  but the majority have suffered alteration in some form, by injected humour,
                                  or randomised words which don't look even slightly believable. </p>
+                                 <button>Book a table</button>
                         </div>
                     </div>
                 </div>

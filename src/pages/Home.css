@@ -6,4 +6,24 @@
     object-fit: cover;
     background-position: center;
     height: 70vh;
+    filter: brightness(40%)
+}
+#homeTxt{
+ 
+    margin-bottom: 120px;
+}
+#homeTxt h5{
+    font-size: 30px;
+    font-weight: 700;
+    color: antiquewhite;
+}
+#homeTxt p{
+    color: antiquewhite;
+}
+#homeTxt button{
+    padding: 10px 40px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.852);
+    color: antiquewhite;
 }

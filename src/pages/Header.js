@@ -1,11 +1,12 @@
-
+import "./Header.css";
+import menulogo from "../asset/menulogo.jpeg";
 function Header() {
     return (
-        <div className="App">
+        <div className="container">
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#" id="logoBox"> <img src={menulogo} id="aboutImg" /></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -15,6 +16,15 @@ function Header() {
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">About-us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                            </li>
+                            {/* <li class="nav-item">
                                 <a class="nav-link" href="#">Link</a>
                             </li>
                             <li class="nav-item dropdown">
@@ -30,11 +40,11 @@ function Header() {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled">Disabled</a>
-                            </li>
+                            </li> */}
                         </ul>
-                        <form class="d-flex" role="search">
-                        <button class="btn btn-outline-primary" type="submit">Login</button>
-                            <button class="btn btn-outline-success" type="submit">Register</button>
+                        <form class="d-flex" id="navbtn">
+                        <button >Login</button>
+                        <button >Register</button>
                         </form>
                     </div>
                 </div>
