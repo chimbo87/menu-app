@@ -5,13 +5,13 @@ function Newsletter() {
     return (
         <div className="container" id="newSection">
 
-            <div class="row"id="iconWrap">
-                <div class="col" id="newsBox">
+            <div id="iconWrap">
+               
                     <img src={google} id="newIcon" />
-                </div>
-                <div class="col" id="newsBox">
+                
+                
                     <img src={apple01} id="newIcon" />
-                </div>
+              
             </div>
             <div className="newsletterBox">
                 <h4>Please sign-up for Newsletter</h4>

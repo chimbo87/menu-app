@@ -1,7 +1,9 @@
 import "./About.css";
 import home01 from "../asset/home 01.jpeg";
+import ourmenu from "../asset/menuvideo.mp4";
 function About() {
     return (
+        <>
         <div className="container">
             <div class="row">
                 <div class="col" id="aboutText">
@@ -28,7 +30,7 @@ function About() {
             </div>
 
             <div className="container" id="theAccordion">
-                <h4>FAQ</h4>
+                <h4>Frequent Asked Question</h4>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -83,6 +85,10 @@ function About() {
                 </div>
             </div>
         </div>
+        <div className="container" id="videoWrap">
+            <video src={ourmenu} autoPlay loop muted id="menuVideo"/>
+        </div>
+        </>
     );
 }
 
