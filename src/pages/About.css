@@ -28,9 +28,11 @@
     padding: 20px 20px;
     background-color: rgba(181, 178, 178, 0.121);
     margin-top: 50px;
+    
 }
 #menuVideo{
     width: 100%;
     object-fit: cover;
     border-radius: 4px;
+    height: 70vh;
 }

@@ -27,7 +27,7 @@ function Home() {
                     <div class="carousel-item" data-bs-interval="2000">
                         <img src={home02} class="d-block w-100" alt="..." id="homeImg" />
                         <div class="carousel-caption d-none d-md-block"id="homeTxt">
-                            <h5>Second slide label</h5>
+                            <h5>Dinning and pub</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
                                  but the majority have suffered alteration in some form, by injected humour,
                                  or randomised words which don't look even slightly believable. </p>

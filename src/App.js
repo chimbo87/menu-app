@@ -1,5 +1,6 @@
 
 
+import Dashboard from './dashboard/Dashboard';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Header from './pages/Header';
@@ -14,6 +15,7 @@ function App() {
      <Newsletter/>
      <About/>
      <Contact/>
+     {/* <Dashboard/> */}
     </div>
   );
 }
