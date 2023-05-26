@@ -10,12 +10,12 @@ import Newsletter from './pages/Newsletter';
 function App() {
   return (
     <div className="App">
-     <Header/>
-     <Home/>
-     <Newsletter/>
-     <About/>
-     <Contact/>
-     {/* <Dashboard/> */}
+      <Header />
+      <Home />
+      <Newsletter />
+      <About />
+      <Contact />
+      {/* <Dashboard/> */}
     </div>
   );
 }
