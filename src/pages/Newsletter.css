@@ -35,4 +35,11 @@
 .newsletterBox h4{
     text-align: center;
     padding-bottom: 10px;
+    color: goldenrod;
+}
+#basic-addon2{
+    background-color: rgba(218, 165, 32, 0.336);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
 }

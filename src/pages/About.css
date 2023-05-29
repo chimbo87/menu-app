@@ -1,9 +1,20 @@
 #aboutText{
     padding: 10px;
 }
-#aboutText h4{
-    text-align: center;
+#faq{
+    align-items: center;
     font-weight: 700;
+    color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#faq span{
+    width: 150px;
+    height: 2px;
+    background-color: grey;
+    display: block;
+    margin-top: 10px;
 }
 #aboutImg{
     width: 100%;
@@ -17,9 +28,20 @@
     border-radius: 4px;
 }
 
-#theAccordion h4{
-    text-align: center;
+#aboutTitle{
+    align-items: center;
     font-weight: 700;
+    color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#aboutTitle span{
+    width: 100px;
+    height: 2px;
+    background-color: grey;
+    display: block;
+    margin-top: 10px;
 }
 .accordion-button{
     background-color: rgba(198, 195, 195, 0.153);

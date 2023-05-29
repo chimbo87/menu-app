@@ -7,7 +7,7 @@ function About() {
         <div className="container">
             <div class="row">
                 <div class="col" id="aboutText">
-                    <h4>About Us</h4>
+                    <h4 id="aboutTitle">About Us<span></span></h4>
                     <p>There are many variations of passages of Lorem Ipsum available,
                         but the majority have suffered alteration in some form, by injected
                         humour, or randomised words which don't look even slightly believable.
@@ -30,7 +30,7 @@ function About() {
             </div>
 
             <div className="container" id="theAccordion">
-                <h4>Frequent Asked Question</h4>
+                <h4 id="faq">Frequent Asked Questions <span></span></h4>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">

@@ -3,7 +3,7 @@
     
 }
 #logoBox{
-    border: 3px solid black;
+    border: 3px solid goldenrod;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -15,7 +15,7 @@
     border-radius: 50%;
 }
 #navbtn button{
-   border: 1px solid grey;
+   border: 1px solid goldenrod;
    border-radius: 4px;
    padding: 8px 40px;
    margin: 0px 5px;

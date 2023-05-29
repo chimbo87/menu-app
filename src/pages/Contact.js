@@ -43,7 +43,7 @@ function Contact() {
 
                     </div>
                     <div class="col-lg-8">
-                    <h4>Get Intouch</h4>
+                    <h4 id="footerTitle">Get Intouch <span></span></h4>
                         <form id="contactForm">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
