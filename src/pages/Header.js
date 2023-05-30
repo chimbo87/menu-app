@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./Header.css";
 import menulogo from "../asset/menulogo.jpeg";
 function Header() {
+
+    const[isLogin, setIsLogin]=useState(true);
+
+    const toggleForm=()=>{
+        setIsLogin(!isLogin);
+    };
     return (
         <>
             <div className="container">
@@ -46,6 +53,7 @@ function Header() {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            {isLogin?(
                             <form>
                                 <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
                                 <div class="mb-3">
@@ -58,10 +66,30 @@ function Header() {
                                 </div>
                                 <div id="loginBtn">
                                     <button>Login</button>
-                                    <p>Dont have account ?  <a href="#">Register</a></p>
+                                    <p>Dont have account ?  <a href="#" onClick={toggleForm}>Register</a></p>
 
                                 </div>
-                            </form>
+                            </form>):(
+                            <form>
+                                <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Enter Email</label>
+                                    <input type="email" class="form-control" id="loginInput" />
+                                </div>
+                                <div class="mb-3" >
+                                    <label for="message-text" class="col-form-label">Create Password</label>
+                                    <input type="password" class="form-control" id="loginInput" />
+                                </div>
+                                <div class="mb-3" >
+                                    <label for="message-text" class="col-form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="loginInput" />
+                                </div>
+                                <div id="loginBtn">
+                                    <button>Create Account</button>
+                                    <p>Already have account ?  <a href="#" onClick={toggleForm}>Login</a></p>
+
+                                </div>
+                            </form>)}
                         </div>
 
                     </div>
