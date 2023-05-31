@@ -1,0 +1,9 @@
+#menuCard{
+    display: flex;
+    flex-direction: column;
+}
+#menuCard img{
+    width: 100%;
+    object-fit: contain;
+    padding: 10px;
+}

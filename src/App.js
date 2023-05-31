@@ -1,21 +1,20 @@
 
-
-import Dashboard from './dashboard/Dashboard';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Header from './pages/Header';
-import Home from './pages/Home';
-import Newsletter from './pages/Newsletter';
+import Dashboard from './components/Dashboard';
+// import About from './pages/About';
+// import Contact from './pages/Contact';
+// import Header from './pages/Header';
+// import Home from './pages/Home';
+// import Newsletter from './pages/Newsletter';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <Home />
       <Newsletter />
       <About />
-      <Contact />
-      {/* <Dashboard/> */}
+      <Contact /> */}
+      <Dashboard/>
     </div>
   );
 }
