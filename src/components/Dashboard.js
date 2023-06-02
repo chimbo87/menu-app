@@ -3,10 +3,19 @@ import menulogo from "../asset/menulogo.jpeg";
 import avat from "../asset/avat.jpg";
 import Booking from './Booking';
 import Menu from './Menu';
-import NavBar from './NavBar';
+// import NavBar from './NavBar';
 import Transactions from './Transactions';
-import { Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
+import Rootlayout from "./Rootlayout";
 function Dashboard() {
+    const router = createBrowserRouter(createRoutesFromElements(
+
+        <Route path='/' element={<Rootlayout />}>
+            <Route path='/menu' element={<Menu />}></Route>
+            <Route path='/transactions' element={<Transactions />}></Route>
+            <Route path='/booking' element={<Booking />}></Route>
+        </Route>
+    ))
     return (
         <div className="container-fluid" >
             <div className="container-fluid" id="topNav">
@@ -16,18 +25,13 @@ function Dashboard() {
                 </div>
 
                 <div id="avatar">
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-shopping-cart"></i>
+                <i class='bx bx-heart'></i>
+                <i class='bx bx-cart'></i>
                     <img src={avat} />
                 </div>
             </div>
             <div id="dashboard">
-                <NavBar />
-                <Routes>
-                    <Route path='menu' element={<Menu />} />
-                    <Route path='/transactions' element={<Transactions />} />
-                    <Route path='/booking' element={<Booking />} />
-                </Routes>
+                <RouterProvider router={router} />
             </div>
 
         </div>

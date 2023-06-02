@@ -1,5 +1,5 @@
 #dashboard{
-   
+    /* margin-top: 80px; */
     display: flex;
     flex-direction: row;
 }
@@ -8,6 +8,11 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba(220, 217, 217, 0.384);
+    
+    /* z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0; */
 }
 #navBarLogo{
     display: flex;
@@ -30,12 +35,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 #avatar i{
-    font-size: 25px;
-    margin-right: 25px;
-    color: rgba(128, 128, 128, 0.683);
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: gray;
+    font-weight: 100;
 }
 #avatar img{
     width: 40px;
