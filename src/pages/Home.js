@@ -7,7 +7,7 @@ import home03 from "../asset/home 03.webp"
 function Home() {
     return (
         <div className="container-fluid" id="homePage">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide"  data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>

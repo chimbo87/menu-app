@@ -1,9 +1,24 @@
 #menuCard{
     display: flex;
     flex-direction: column;
+
+}
+#menuSection{
+    background-color: rgba(232, 230, 230, 0.279);
 }
 #menuCard img{
     width: 100%;
+   
     object-fit: contain;
     padding: 10px;
+}
+#menuInputsWrap{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+#menuInputs{
+    margin: 10px 5px;
+    padding: 20px 10px;
+    background-color: rgba(232, 230, 230, 0.279);
 }
