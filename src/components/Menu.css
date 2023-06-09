@@ -8,17 +8,135 @@
 }
 #menuCard img{
     width: 100%;
-   
+    border-radius: 4px;
     object-fit: contain;
     padding: 10px;
 }
+#menuCard button{
+    border: 1px solid rgba(128, 128, 128, 0.29);
+    border-radius: 4px;
+    padding: 5px 0px;
+    margin: 0px 5px;
+    text-transform: capitalize;
+}
 #menuInputsWrap{
-    display: flex;
+   display: flex;
    justify-content: space-between;
    align-items: center;
+   padding-top: 10px;
+}
+#canval button{
+    border: 1px solid rgba(128, 128, 128, 0.251);
+    background-color: rgba(250, 199, 69, 0.482);
+    border-radius: 4px;
+    padding: 2px 4px;
+    
+}
+#canval button:hover{
+    background-color: rgba(197, 152, 38, 0.728);
+    transition: 5ms;
+}
+#canval button span{
+    width: 45px;
+    height: 2px;
+    background-color: rgba(128, 128, 128, 0.6);
+    display: block;
+    margin: 6px 0px;
 }
 #menuInputs{
-    margin: 10px 5px;
-    padding: 20px 10px;
+margin-top: 10px;
+background-color: rgba(232, 230, 230, 0.279);
+}
+#menuSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#menuIcon{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+#searchBtn{
+    background-color: rgba(250, 199, 69, 0.482);
+}
+#searchBtn:hover{
+    background-color: rgba(197, 152, 38, 0.728);
+}
+#itemsIcons{
+    display: flex;
+}
+
+#itemsIcons i{
+    font-size: 26px;
+    cursor: pointer;
+}
+#modalHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgba(232, 230, 230, 0.279);
+    padding: 5px 5px;
+    margin: 0px 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.221);
+}
+#modalHeader img{
+    width: 60px;
+    height: inherit;
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+}
+#itemsQty{
+   
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -15px;
+    bottom: 10px;
+    cursor: pointer;
+    background-color: rgba(250, 199, 69, 0.943);
+}
+#itemsQty:hover{
+    background-color: rgba(197, 152, 38, 0.728);
+}
+#offcanvasScrolling{
+    background-color: rgba(249, 249, 249, 0.998);
+    max-width: 250px;
+    box-shadow: 2px 2px 12px grey;
+}
+#canvasList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#canvasList ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+#canvasList ul li{
+
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px 5px;
+    width: 100%;
+    cursor: pointer;
+    margin: 8px 0px;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(216, 212, 212, 0.61);
+}
+#canvasList ul li:hover{
+    background-color: rgba(218, 165, 32, 0.454);
 }

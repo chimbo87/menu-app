@@ -1,16 +1,18 @@
 import { useState } from "react";
 import "./Header.css";
 import menulogo from "../asset/menulogo.jpeg";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 function Header() {
+    const navigate = useNavigate();
+    const [isLogin, setIsLogin] = useState(true);
 
-    const[isLogin, setIsLogin]=useState(true);
-
-    const toggleForm=()=>{
+    const toggleForm = () => {
         setIsLogin(!isLogin);
     };
     return (
         <>
-            <div className="container">
+            <div className="container-fluid">
 
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
@@ -21,17 +23,16 @@ function Header() {
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <Link className="nav-link" to="/" as={Link} id="navTxt">
+                                        Home
+                                    </Link>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">About-us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Service</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
-                                </li>
+                               
+                                {/* <li class="nav-item">
+                                    <Link className="nav-link" to="/menu" as={Link} id="navTxt">
+                                        Menu
+                                    </Link>
+                                </li> */}
 
                             </ul>
                             <form class="d-flex" id="navbtn">
@@ -53,43 +54,43 @@ function Header() {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            {isLogin?(
-                            <form>
-                                <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="loginInput" />
-                                </div>
-                                <div class="mb-3" >
-                                    <label for="message-text" class="col-form-label">Password</label>
-                                    <input type="password" class="form-control" id="loginInput" />
-                                </div>
-                                <div id="loginBtn">
-                                    <button>Login</button>
-                                    <p>Dont have account ?  <a href="#" onClick={toggleForm}>Register</a></p>
+                            {isLogin ? (
+                                <form>
+                                    <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Email</label>
+                                        <input type="email" class="form-control" id="loginInput" />
+                                    </div>
+                                    <div class="mb-3" >
+                                        <label for="message-text" class="col-form-label">Password</label>
+                                        <input type="password" class="form-control" id="loginInput" />
+                                    </div>
+                                    <div id="loginBtn">
+                                        <button  onClick={()=>{navigate("/menu")}}>Login</button>
+                                        <p>Dont have account ?  <a href="#" onClick={toggleForm}>Register</a></p>
 
-                                </div>
-                            </form>):(
-                            <form>
-                                <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Enter Email</label>
-                                    <input type="email" class="form-control" id="loginInput" />
-                                </div>
-                                <div class="mb-3" >
-                                    <label for="message-text" class="col-form-label">Create Password</label>
-                                    <input type="password" class="form-control" id="loginInput" />
-                                </div>
-                                <div class="mb-3" >
-                                    <label for="message-text" class="col-form-label">Confirm Password</label>
-                                    <input type="password" class="form-control" id="loginInput" />
-                                </div>
-                                <div id="loginBtn">
-                                    <button>Create Account</button>
-                                    <p>Already have account ?  <a href="#" onClick={toggleForm}>Login</a></p>
+                                    </div>
+                                </form>) : (
+                                <form>
+                                    <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Enter Email</label>
+                                        <input type="email" class="form-control" id="loginInput" />
+                                    </div>
+                                    <div class="mb-3" >
+                                        <label for="message-text" class="col-form-label">Create Password</label>
+                                        <input type="password" class="form-control" id="loginInput" />
+                                    </div>
+                                    <div class="mb-3" >
+                                        <label for="message-text" class="col-form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" id="loginInput" />
+                                    </div>
+                                    <div id="loginBtn">
+                                        <button>Create Account</button>
+                                        <p>Already have account ?  <a href="#" onClick={toggleForm}>Login</a></p>
 
-                                </div>
-                            </form>)}
+                                    </div>
+                                </form>)}
                         </div>
 
                     </div>
