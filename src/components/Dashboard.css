@@ -1,0 +1,75 @@
+#dashboardLayout{
+    display: flex;
+}
+#itemsQty:hover{
+    background-color: rgba(197, 152, 38, 0.728);
+}
+#offcanvasScrolling{
+    background-color: rgba(249, 249, 249, 0.998);
+    max-width: 250px;
+    box-shadow: 2px 2px 12px grey;
+}
+#canvasList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: 5px 5px;
+}
+#canvasList H4{
+   color: goldenrod;
+   margin-top: 30px;
+}
+#offcanvasResponsive{
+    max-width: 250px;
+}
+
+#canvasList ul{
+   padding: 5px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+    justify-content: center;
+   
+}
+#canvasList ul li{
+
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px 5px;
+    width: 100%;
+    cursor: pointer;
+    margin: 8px 0px;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(216, 212, 212, 0.58);
+}
+#canvasList ul li:hover{
+    background-color: rgba(218, 165, 32, 0.454);
+}
+#canvasList ul li:active{
+    background-color: rgba(218, 165, 32, 0.454);
+}
+#dashboardLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.228);
+}
+#dashboardLinks i{
+    color: rgba(218, 165, 32, 0.653);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 5px 5px;
+}
+#dashboardLinks i:hover{
+    color: rgba(134, 105, 29, 0.653);
+}

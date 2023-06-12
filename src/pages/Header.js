@@ -36,6 +36,12 @@ function Header() {
 
                             </ul>
                             <form class="d-flex" id="navbtn">
+                            
+                                    <Link className="nav-link" to="/blog" as={Link} id="navTxt">
+                                        Our blog
+                                    </Link>
+                                
+                                
                                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Login</button>
 
                             </form>
@@ -66,7 +72,7 @@ function Header() {
                                         <input type="password" class="form-control" id="loginInput" />
                                     </div>
                                     <div id="loginBtn">
-                                        <button  onClick={()=>{navigate("/menu")}}>Login</button>
+                                        <button  onClick={()=>{navigate("/dashboard")}}>Login</button>
                                         <p>Dont have account ?  <a href="#" onClick={toggleForm}>Register</a></p>
 
                                     </div>

@@ -1,36 +1,14 @@
 import menu from "../asset/home 01.jpeg";
 import menulogo from "../asset/menulogo.jpeg";
+
 import "./Menu.css";
 function Menu() {
     return (
         <>
-            <div class="container " id="menuInputs">
+        <div id="menuGroup">
+            <div class="container" id="menuInputs">
                 <div class="row" id="menuInputsWrap">
-                    <div class="col-lg-4" id="canval">
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
 
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body" id="canvasList">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Our Menu</li>
-                                    <li class="list-group-item">Transactions</li>
-                                    <li class="list-group-item">Wallet</li>
-                                    <li class="list-group-item">Book a Table</li>
-                                    <li class="list-group-item">Support</li>
-                                    <li class="list-group-item">Settings</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
 
                     <div class="col-lg-4">
                         <div id="menuSearch">
@@ -111,6 +89,7 @@ function Menu() {
                         <button>order now</button>
                     </div>
                 </div>
+
             </div>
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
@@ -151,6 +130,7 @@ function Menu() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );
