@@ -1,7 +1,9 @@
 import "./Front.css";
-import home01 from "../asset/home 01.jpeg";
-import home02 from "../asset/home 02.jpeg";
-import home03 from "../asset/home 03.webp"
+import front01 from "../asset/front01.jpg";
+import front02 from "../asset/front02.jpg";
+import front03 from "../asset/front03.jpg"
+// import front04 from "../asset/front04.jpg"
+// import front05 from "../asset/front05.jpg"
 
 
 function Front() {
@@ -16,7 +18,7 @@ function Front() {
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src={home01} class="d-block w-100" alt="..." id="homeImg" />
+                        <img src={front01} class="d-block w-100" alt="..." id="homeImg" />
                         <div class="carousel-caption d-none d-md-block" id="homeTxt">
                             <h5>Restaurant and Bar</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
@@ -26,7 +28,7 @@ function Front() {
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src={home02} class="d-block w-100" alt="..." id="homeImg" />
+                        <img src={front02} class="d-block w-100" alt="..." id="homeImg" />
                         <div class="carousel-caption d-none d-md-block"id="homeTxt">
                             <h5>Dinning and pub</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
@@ -36,7 +38,7 @@ function Front() {
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src={home03} class="d-block w-100" alt="..." id="homeImg" />
+                        <img src={front03} class="d-block w-100" alt="..." id="homeImg" />
                         <div class="carousel-caption d-none d-md-block"id="homeTxt">
                             <h5>Third slide label</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
@@ -45,6 +47,7 @@ function Front() {
                                  <button>Book a table</button>
                         </div>
                     </div>
+               
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

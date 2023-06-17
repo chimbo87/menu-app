@@ -80,15 +80,15 @@ function Header() {
                                 <form>
                                     <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
                                     <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Enter Email</label>
+                                        <label for="recipient-name" class="col-form-label">Enter Full Name</label>
+                                        <input type="text" class="form-control" id="loginInput" />
+                                    </div>
+                                    <div class="mb-3" >
+                                        <label for="message-text" class="col-form-label">Enter Your Email</label>
                                         <input type="email" class="form-control" id="loginInput" />
                                     </div>
                                     <div class="mb-3" >
                                         <label for="message-text" class="col-form-label">Create Password</label>
-                                        <input type="password" class="form-control" id="loginInput" />
-                                    </div>
-                                    <div class="mb-3" >
-                                        <label for="message-text" class="col-form-label">Confirm Password</label>
                                         <input type="password" class="form-control" id="loginInput" />
                                     </div>
                                     <div id="loginBtn">
