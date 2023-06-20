@@ -1,17 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.css";
 import menulogo from "../asset/menulogo.jpeg";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-function Header() {
-    const navigate = useNavigate();
-    const [isLogin, setIsLogin] = useState(true);
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useLoginMutation } from "../features/usersApiSlice";
+import { setCredentials } from "../features/authSlice";
 
+import LogoutForm from "./LogoutForm";
+
+function Header() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { userInfo } = useSelector((state) => state.auth);
+    const [login, { }] = useLoginMutation();
+
+    const [isLogin, setIsLogin] = useState(true);
     const toggleForm = () => {
         setIsLogin(!isLogin);
     };
+
+    useEffect(() => {
+        if (userInfo) {
+            navigate('/dashboard')
+        }
+    }, [navigate, userInfo]);
+
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await login({ email, password }).unwrap();
+            dispatch(setCredentials({ ...res }))
+            navigate('/dashboard')
+
+        } catch (err) {
+
+        }
+    };
+
+
+
+
+
     return (
         <>
+
             <div className="container-fluid">
 
                 <nav class="navbar navbar-expand-lg bg-body-tertiary"  >
@@ -24,10 +61,10 @@ function Header() {
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <Link className="nav-link" to="/" as={Link} id="navTxt">
-                                        
+
                                     </Link>
                                 </li>
-                               
+
                                 {/* <li class="nav-item">
                                     <Link className="nav-link" to="/menu" as={Link} id="navTxt">
                                         Menu
@@ -35,16 +72,24 @@ function Header() {
                                 </li> */}
 
                             </ul>
-                            <form class="d-flex" id="navbtn">
-                            
-                                    <Link className="nav-link" to="/blog" as={Link} id="navTxt">
-                                        Our blog
-                                    </Link>
-                                
-                                
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Login</button>
+                            <div class="d-flex" id="navbtn">
+                                {userInfo ? (
+                                    <>
+                                        <p>{userInfo.name}</p>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Link className="nav-link" to="/blog" as={Link} id="navTxt">
+                                            Our blog
+                                        </Link>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Login</button>
+                                    </>
+                                )}
 
-                            </form>
+
+
+
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -61,42 +106,26 @@ function Header() {
                         </div>
                         <div class="modal-body">
                             {isLogin ? (
-                                <form>
+                                <form onSubmit={submitHandler} >
                                     <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Email</label>
-                                        <input type="email" class="form-control" id="loginInput" />
+                                        <input type="email" class="form-control" id="loginInput" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                     <div class="mb-3" >
                                         <label for="message-text" class="col-form-label">Password</label>
-                                        <input type="password" class="form-control" id="loginInput" />
+                                        <input type="password" class="form-control" id="loginInput" value={password} onChange={(e) => setPassword(e.target.value)} />
                                     </div>
                                     <div id="loginBtn">
-                                        <button  onClick={()=>{navigate("/dashboard")}}>Login</button>
+                                        <button type="submit">Login</button>
                                         <p>Dont have account ?  <a href="#" onClick={toggleForm}>Register</a></p>
 
                                     </div>
                                 </form>) : (
-                                <form>
-                                    <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Enter Full Name</label>
-                                        <input type="text" class="form-control" id="loginInput" />
-                                    </div>
-                                    <div class="mb-3" >
-                                        <label for="message-text" class="col-form-label">Enter Your Email</label>
-                                        <input type="email" class="form-control" id="loginInput" />
-                                    </div>
-                                    <div class="mb-3" >
-                                        <label for="message-text" class="col-form-label">Create Password</label>
-                                        <input type="password" class="form-control" id="loginInput" />
-                                    </div>
-                                    <div id="loginBtn">
-                                        <button>Create Account</button>
-                                        <p>Already have account ?  <a href="#" onClick={toggleForm}>Login</a></p>
-
-                                    </div>
-                                </form>)}
+                                <div>
+                                    <LogoutForm />
+                                </div>
+                            )}
                         </div>
 
                     </div>

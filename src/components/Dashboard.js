@@ -1,8 +1,22 @@
-import { Link, Outlet } from "react-router-dom";
 import "./Dashboard.css";
+import { Link, Outlet } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
+import { useLogoutMutation } from "../features/usersApiSlice";
+import { logout } from "../features/authSlice";
 const Dashboard = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [logoutApiCall] = useLogoutMutation();
+    const logoutHandler = async () => {
+        try {
+            await logoutApiCall().unwrap();
+            dispatch(logout());
+            navigate('/');
+        } catch (err) {
+            console.log(err)
+        }
+    }
     return (
         <div className="container-fluid" id="dashboardLayout">
             <div>
@@ -42,10 +56,10 @@ const Dashboard = () => {
 
                             <li class="list-group-item">Book a Table</li>
                             <li class="list-group-item">Support</li>
-                            <li class="list-group-item" onClick={()=>{navigate("/")}}>Logout</li>
+                            <li class="list-group-item" onClick={logoutHandler}>Logout</li>
                             <div id="dashboardLinks">
                                 <i class='bx bxl-facebook'></i>
-                               
+
                                 <i class='bx bxl-twitter'></i>
                                 <i class='bx bxl-youtube'></i>
                                 <i class='bx bxl-instagram'></i>

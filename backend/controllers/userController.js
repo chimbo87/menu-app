@@ -1,5 +1,6 @@
-import asyncHandler from 'express-async-handler'
+import asyncHandler from 'express-async-handler';
 import User from '../models/userModel.js';
+import product from '../models/productModel.js'
 import generateToken from '../utils/generateToken.js';
 //@discription  authUser/ send token
 // route  POST /api/users/ auth
@@ -70,6 +71,13 @@ const logoutUser= asyncHandler(async(req, res)=>{
 // GET/ api/users/profile
 //@access private
 const getUserProfile= asyncHandler(async(req, res)=>{ 
+    const user = {
+      _id: req.user._id,
+      name: req.user.name,
+      email:req.user.email,
+    };
+    res.status(200).json(user);
+
   res.status(200).json({message:'get user profile'})
 });
 
@@ -92,8 +100,36 @@ const updateUserProfile= asyncHandler(async(req, res)=>{
     })
  }else{
   res.status(400);
-  throw new Error('User not found')
+   throw new Error('User not found')
  }
+});
+
+const getProducts= asyncHandler(async(req, res)=>{ 
+  try{
+      const products =  await product.find({})
+      res.status(200).json(products);
+  }catch(error){
+      console.log(error.message)
+      res.status(500).json({message:error.message})
+  }
+});
+
+const userProducts= asyncHandler(async(req, res)=>{ 
+  try{
+    
+      const {name, title, price, image} = req.body;
+      const Product = await product.create({
+        name,
+        title,
+        price,
+        image
+      });
+      res.status(200).json(Product);
+  }catch(error){
+      console.log(error.message)
+      res.status(500).json({message:error.message})
+  }
+ 
 });
 
 export{
@@ -101,5 +137,7 @@ export{
   registerUser,
   logoutUser,
   getUserProfile,
-  updateUserProfile
+  updateUserProfile,
+  getProducts,
+  userProducts
 };

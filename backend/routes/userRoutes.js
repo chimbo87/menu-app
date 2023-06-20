@@ -1,22 +1,26 @@
-import express  from "express";
+import express from "express";
 
-import { 
-    authUser,
-    registerUser,
-    logoutUser,
-    getUserProfile,
-    updateUserProfile } from "../controllers/userController.js";
-  
+import {
+  authUser,
+  registerUser,
+  logoutUser,
+  getUserProfile,
+  updateUserProfile,
+  getProducts,
+  userProducts
+} from "../controllers/userController.js";
+import { protect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
 router.post('/', registerUser);
 router.post('/auth', authUser);
-router.post('/logout',logoutUser);
+router.post('/logout', logoutUser);
 router
-.route('/profile')
-.get(getUserProfile)
-.put(updateUserProfile);
+  .route('/profile').get(protect, getUserProfile)
+  .put(protect, updateUserProfile);
+router.get('/products', getProducts);
+router.post('/products', userProducts);
 
 
 
