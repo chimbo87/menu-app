@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Header.css";
-// import menulogo from "../asset/menulogo.jpeg";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useRegisterMutation } from "../features/usersApiSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -38,6 +39,7 @@ const Logoutform = () => {
 
         } catch (err) {
             console.log(err)
+            toast.error(err?.data?.message || err.error);
         }
     };
     return (

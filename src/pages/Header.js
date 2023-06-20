@@ -5,11 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useLoginMutation } from "../features/usersApiSlice";
 import { setCredentials } from "../features/authSlice";
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import LogoutForm from "./LogoutForm";
 
 function Header() {
-
+    
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -34,11 +35,11 @@ function Header() {
         e.preventDefault();
         try {
             const res = await login({ email, password }).unwrap();
-            dispatch(setCredentials({ ...res }))
-            navigate('/dashboard')
-
+            dispatch(setCredentials({ ...res }));
+            navigate('/dashboard');
+            
         } catch (err) {
-
+            toast.error(err?.data?.message || err.error);
         }
     };
 
