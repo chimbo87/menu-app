@@ -3,6 +3,8 @@ import "./Header.css";
 import menulogo from "../asset/menulogo.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../features/authSlice";
+import { useLogoutMutation } from "../features/usersApiSlice";
 import { useLoginMutation } from "../features/usersApiSlice";
 import { setCredentials } from "../features/authSlice";
 import { toast } from 'react-toastify';
@@ -10,7 +12,26 @@ import 'react-toastify/dist/ReactToastify.css';
 import LogoutForm from "./LogoutForm";
 
 function Header() {
-    
+   
+    const [logoutApiCall] = useLogoutMutation();
+    const logoutHandler = async () => {
+        try {
+            await logoutApiCall().unwrap();
+            dispatch(logout());
+            navigate('/');
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+
+    const showToastMessage = () => {
+        toast.success('Success Notification !', {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    };
+
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -37,7 +58,7 @@ function Header() {
             const res = await login({ email, password }).unwrap();
             dispatch(setCredentials({ ...res }));
             navigate('/dashboard');
-            
+            toast.success("login successful")
         } catch (err) {
             toast.error(err?.data?.message || err.error);
         }
@@ -76,14 +97,23 @@ function Header() {
                             <div class="d-flex" id="navbtn">
                                 {userInfo ? (
                                     <>
-                                        <p>{userInfo.name}</p>
+                                        
+                                        <div class="dropdown-center" id="userInfor">
+                                            <button class="btn dropdown-toggle d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btnUserInfo">
+                                              {userInfo.name}
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                <li><a class="dropdown-item" href="#"  onClick={logoutHandler}>Log out</a></li>
+                                            </ul>
+                                        </div>
                                     </>
                                 ) : (
                                     <>
                                         <Link className="nav-link" to="/blog" as={Link} id="navTxt">
                                             Our blog
                                         </Link>
-                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Login</button>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat" id="loginButton">Login</button>
                                     </>
                                 )}
 

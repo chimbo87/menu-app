@@ -7,11 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   
 
-    const showToastMessage = () => {
-      toast.success('Success Notification !', {
-          position: toast.POSITION.TOP_RIGHT
-      });
-  };
+  
   return (
     <div>
         <div>
