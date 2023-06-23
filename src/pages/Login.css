@@ -1,0 +1,15 @@
+#formBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242, 241, 241, 0.249);
+}
+#formWrap{
+    max-width: 500px;
+    border: 1px solid grey;
+  
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}

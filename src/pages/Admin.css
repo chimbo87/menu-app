@@ -1,0 +1,13 @@
+#theAdmin{
+    background-color: transparent;
+}
+#adminBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#adminBtn li{
+    border-radius: 4px;
+    background-color: rgba(218, 165, 32, 0.208);
+}

@@ -1,0 +1,17 @@
+#theBlog h5{
+    text-align: center;
+}
+#blogBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#blogBtn button{
+    background-color: rgba(218, 165, 32, 0.283) ;
+    border: 1px solid white;
+    padding: 10px 40px;
+    border-radius: 4px;
+}
+#blogInput input{
+    border: 1px solid grey;
+}

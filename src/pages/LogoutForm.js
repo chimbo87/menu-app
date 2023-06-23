@@ -16,10 +16,10 @@ const Logoutform = () => {
     const { userInfo } = useSelector((state) => state.auth);
     const [register, { }] = useRegisterMutation();
 
-    // const [isLogin, setIsLogin] = useState(true);
-    // const toggleForm = () => {
-    //     setIsLogin(!isLogin);
-    // };
+    const [isLogin, setIsLogin] = useState(true);
+    const toggleForm = () => {
+        setIsLogin(!isLogin);
+    };
 
     useEffect(() => {
         if (userInfo) {
@@ -33,10 +33,8 @@ const Logoutform = () => {
 
         try {
             const res = await register({ name, email, password }).unwrap();
-            dispatch(setCredentials({ ...res }))
-            navigate('/')
-
-
+            dispatch(setCredentials({ ...res }));
+            toggleForm()
         } catch (err) {
             console.log(err)
             toast.error(err?.data?.message || err.error);
@@ -44,8 +42,6 @@ const Logoutform = () => {
     };
     return (
         <div>
-
-            
                 <form onSubmit={submitRegHandler}>
                     <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
                     <div class="mb-3">

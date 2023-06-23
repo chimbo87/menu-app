@@ -1,0 +1,19 @@
+
+#menuForm h5{
+    text-align: center;
+}
+#menuFormBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menuForm button{
+    background-color: rgba(218, 165, 32, 0.283) ;
+    border: 1px solid white;
+    padding: 10px 40px;
+    border-radius: 4px;
+  
+}
+#menuInput input{
+    border: 1px solid grey;
+}

@@ -18,6 +18,14 @@
     justify-content: space-between;
     align-items: center;
 }
+#navbtn button{
+    border: 1px solid  grey;
+    padding: 8px 40px;
+    border-radius: 4px;
+}
+#navbtn button:hover{
+    background-color: rgba(218, 165, 32, 0.194);
+}
 #navbtn p{
    font-weight: 500;
    color: rgb(66, 65, 65);
@@ -44,11 +52,24 @@
 #userInfor button:hover{
     background-color: rgba(128, 128, 128, 0.233);
 }
-#logoBox img{
-    width: 100%;
-    height: 100%;
+#theLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#theLogo img{
+    width: 60px;
+    height:60px;
+    margin: 4px 4px;
     object-fit: cover;
     border-radius: 50%;
+    border: 1px solid rgba(218, 165, 32, 0.215);
+}
+#theLogo small{
+    font-weight: 700;
+    font-size: 16px;
+    color: gray;
 }
 #loginButton{
    border: 1px solid goldenrod;
