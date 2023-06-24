@@ -30,7 +30,7 @@ const LoginForm = () => {
             const res = await login({ email, password }).unwrap();
             dispatch(setCredentials({ ...res }));
             navigate('/dashboard');
-            toast.success("login successful")
+           
         } catch (err) {
             toast.error(err?.data?.message || err.error);
         }

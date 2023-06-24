@@ -1,10 +1,11 @@
 #loginFormBox{
-    width: 450px;
+    width: 420px;
     border-radius: 4px;
     box-shadow: 2px 2px 10px  gray;
     padding: 20px;
     margin-top: 10px;
-    background-color: rgba(217, 217, 214, 0.126);
+    margin-bottom: 10px;
+    background-color: white;
 }
 #loginFormImg{
     display: flex;
@@ -17,3 +18,46 @@
     height: 70px;
     border-radius: 50%;
 }
+#exampleModalLabel{
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+}
+#exampleModalLabel span{
+    height: 2px ;
+    width: 50px;
+    display: block;
+    background-color: gray;
+    margin: 0px 10px;
+}
+#loginInput{
+    border: 1px solid grey;
+    background-color: rgb(244, 244, 244);
+    height: 45px;
+}
+#loginBtn {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#loginBtn button{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 0px;
+    background-color: goldenrod;
+    border-radius: 6px;
+    border: none;
+}
+
+#loginBtn button:hover{
+    background-color: rgba(218, 165, 32, 0.416);
+}
+#loginBtn p{
+    margin-top: 10px;
+} 

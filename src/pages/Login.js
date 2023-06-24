@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 const Login = () => {
     return (
         <div className="container-fluid" id="formBox">
-            <div >
+            <div id="loginContainerBox">
                 <Outlet id="formWrap">
 
                 </Outlet>

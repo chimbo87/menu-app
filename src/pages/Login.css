@@ -2,14 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(242, 241, 241, 0.249);
+    background-image: url('https://www.ikea.com/images/a-table-displaying-three-different-table-settings-including--28723e46805a429ee4cd27f2a5556fd1.jpg?f=sg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    filter: brightness(80%);
+    height: 90vh;
 }
 #formWrap{
     max-width: 500px;
-    border: 1px solid grey;
-  
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    
+    border: 1px solid grey; 
 }

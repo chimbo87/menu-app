@@ -1,66 +1,69 @@
-import "./LoginForm.css";
-import menulogo from "../asset/menulogo.jpeg";
+import './RegisterForm.css';
+import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRegisterMutation } from "../features/usersApiSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useLoginMutation } from "../features/usersApiSlice";
 import { setCredentials } from "../features/authSlice";
-import { useState, useEffect } from "react";
 
 const RegisterForm = () => {
-
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const [name, setName] = useState("");
+    const [email, setRegEmail] = useState("");
+    const [password, setRegPassword] = useState("");
     const { userInfo } = useSelector((state) => state.auth);
-    const [login, { }] = useLoginMutation();
+    const [register, { }] = useRegisterMutation();
+
+
 
     useEffect(() => {
         if (userInfo) {
-            navigate('/dashboard')
+            navigate('/login')
         }
     }, [navigate, userInfo]);
 
-    const submitHandler = async (e) => {
+
+    const submitRegHandler = async (e) => {
         e.preventDefault();
+
         try {
-            const res = await login({ email, password }).unwrap();
+            const res = await register({ name, email, password }).unwrap();
             dispatch(setCredentials({ ...res }));
-            navigate('/dashboard');
-            toast.success("login successful")
+            navigate('/login')
         } catch (err) {
+            console.log(err)
             toast.error(err?.data?.message || err.error);
         }
     };
     return (
-        <div id='loginFormBox'>
-            <form onSubmit={submitHandler} >
-                <div id="loginFormImg">
-                    <img src={menulogo} id="loginImg" />
-                </div>
-
+        <div>
+            <form onSubmit={submitRegHandler} id='registerForm'>
                 <h4 class="modal-title fs-5" id="exampleModalLabel"><span></span>the GREAT table<span></span></h4>
                 <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Email</label>
-                    <input type="email" class="form-control" id="loginInput" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <label for="recipient-name" class="col-form-label">Enter Full Name</label>
+                    <input type="text" class="form-control" id="loginInput" value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div class="mb-3" >
-                    <label for="message-text" class="col-form-label">Password</label>
-                    <input type="password" class="form-control" id="loginInput" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <label for="message-text" class="col-form-label">Enter Your Email</label>
+                    <input type="email" class="form-control" id="loginInput" value={email} onChange={(e) => setRegEmail(e.target.value)} />
                 </div>
                 <div class="mb-3" >
-                    <label for="message-text" class="col-form-label">Password</label>
-                    <input type="password" class="form-control" id="loginInput" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <label for="message-text" class="col-form-label">Create Password</label>
+                    <input type="password" class="form-control" id="loginInput" value={password} onChange={(e) => setRegPassword(e.target.value)} />
                 </div>
                 <div id="loginBtn">
-                    <button type="submit">Login</button>
-                    <p>Already have account ?  <a href="#" onClick={()=>{navigate("/login")}}>Login</a></p>
+                    <button>Create Account</button>
+                    <p>Already have account ?  <a href="#" onClick={() => { navigate("/login") }}>Login</a></p>
                 </div>
             </form>
+            <div>
+
+            </div>
+
         </div>
     )
 }
+
 export default RegisterForm;
