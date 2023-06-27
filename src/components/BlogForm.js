@@ -1,7 +1,10 @@
 import "./BlogForm.css";
+import { useEffect } from "react";
 const BlogForm = () => {
+    
     return (
         <div id="theBlog">
+
             <h5>Post a blog for users</h5>
             <form id="blogInput">
                 <div class="mb-3" >

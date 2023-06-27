@@ -1,6 +1,7 @@
 
 #menuForm h5{
     text-align: center;
+    color: rgba(121, 90, 12, 0.945);
 }
 #menuFormBtn{
     display: flex;
@@ -15,5 +16,5 @@
   
 }
 #menuInput input{
-    border: 1px solid grey;
+    border: 1px solid rgba(128, 128, 128, 0.345);
 }

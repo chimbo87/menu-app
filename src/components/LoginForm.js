@@ -30,7 +30,7 @@ const LoginForm = () => {
             const res = await login({ email, password }).unwrap();
             dispatch(setCredentials({ ...res }));
             navigate('/dashboard');
-           
+            
         } catch (err) {
             toast.error(err?.data?.message || err.error);
         }

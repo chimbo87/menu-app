@@ -5,9 +5,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-right: 1px solid rgb(184, 184, 184);
+    /* border-bottom: 1px solid grey; */
+}
+#adminTxt{
+    font-weight: 700;
+    border-left: 1px solid rgb(184, 184, 184);
+    cursor: pointer;
+    padding: 0px 20px;
+}
+#adminTxt:hover{
+    color: grey;
+    background-color: rgba(250, 235, 215, 0.258);
 }
 
-#adminBtn li{
+/* #adminBtn li{
     border-radius: 4px;
     background-color: rgba(218, 165, 32, 0.208);
+} */
+#adminPanel{
+    background-color: rgba(221, 220, 220, 0.265);
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
 }

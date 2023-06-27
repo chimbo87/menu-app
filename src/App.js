@@ -15,6 +15,9 @@ import BlogForm from './components/BlogForm';
 import Login from './pages/Login';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
+import Users from './components/User';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import MenuList from './components/MenuList';
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -34,6 +37,8 @@ function App() {
            <Route index element={<MenuForm />} />
            <Route path="menuform" element={<MenuForm/>} />
            <Route path="blogform" element={<BlogForm/>} />
+           <Route path="users" element={<Users/>} />
+           <Route path="menulist" element={<MenuList/>} />
         </Route>
         <Route path="/login" element={<Login />}>
             <Route index element={<LoginForm/>} />

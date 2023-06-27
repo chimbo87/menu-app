@@ -54,6 +54,15 @@ const registerUser= asyncHandler(async(req, res)=>{
     throw new Error('invalid user data');
   }
 });
+const getUsers= asyncHandler(async(req, res)=>{ 
+  try{
+      const users =  await User.find({})
+      res.status(200).json(users);
+  }catch(error){
+      console.log(error.message)
+      res.status(500).json({message:error.message})
+  }
+});
 
 //logout user
 // route POST / api/ users/ logout
@@ -136,6 +145,7 @@ export{
   authUser,
   registerUser,
   logoutUser,
+  getUsers,
   getUserProfile,
   updateUserProfile,
   getProducts,

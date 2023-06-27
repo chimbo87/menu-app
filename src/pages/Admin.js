@@ -8,12 +8,27 @@ const Admin = () => {
                 <ul class="list-group list-group-flush" id="adminBtn">
                     <li class="list-group-item">
                         <Link className="nav-link  active" to="menuform" as={Link} id="adminTxt">
-                            + add menu
+                             Add Menu
                         </Link>
                     </li>
                     <li class="list-group-item">
                         <Link className="nav-link" to="blogform" as={Link} id="adminTxt">
-                            + add blog
+                             Add Blog
+                        </Link>
+                    </li>
+                    <li class="list-group-item">
+                        <Link className="nav-link" to="users" as={Link} id="adminTxt">
+                            View Users
+                        </Link>
+                    </li>
+                    <li class="list-group-item">
+                        <Link className="nav-link" to="users" as={Link} id="adminTxt">
+                            View Feedbacks
+                        </Link>
+                    </li>
+                    <li class="list-group-item">
+                        <Link className="nav-link" to="menulist" as={Link} id="adminTxt">
+                            Menu list
                         </Link>
                     </li>
                 </ul>
