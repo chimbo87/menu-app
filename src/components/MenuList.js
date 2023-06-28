@@ -15,9 +15,17 @@ const MenuList = () => {
         getProducts()
 
     }, []);
+    const handleFilter = (event) => {
+        const newData = products.filter(row => row.name.toLowerCase().includes(event.target.value.toLowerCase()))
+        setProducts(newData);
+    }
     return (
         <div>
+              <div id='menuListInput' >
+                    <input type='text' placeholder='Search...' onChange={handleFilter} style={{ padding: '6px 15px', border: '1px solid gray', margin: '4px 4px' }} />
+                </div>
             <table class="table table-striped  table-hover">
+               
               
                 <thead >
                     <tr >

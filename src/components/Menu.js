@@ -7,19 +7,28 @@ function Menu() {
 
 
     const [products, setProducts] = useState([]);
+    const [filterRecords, setFilterRecords] = useState([]);
 
     const getProducts = async () => {
 
         const response = await fetch(
             "http://localhost:5000/api/users/products"
         ).then((response) => response.json());
-        setProducts(response)
+        {
+            setProducts(response)
+            setFilterRecords(response)
+        }
+      
         console.log('our products list:', response);
     };
     useEffect(() => {
         getProducts()
 
     }, []);
+    const handleFilter = (event) => {
+        const newData = filterRecords.filter(row => row.name.toLowerCase().includes(event.target.value.toLowerCase()))
+        setProducts(newData);
+    }
     return (
         <>
             <div id="menuGroup">
@@ -29,7 +38,7 @@ function Menu() {
 
                         <div class="col-lg-4">
                             <div id="menuSearch">
-                                <input type="search" class="form-control" placeholder="Search Menu " aria-label="Username" aria-describedby="addon-wrapping" />
+                                <input type="search" class="form-control" placeholder="Search Menu " aria-label="Username" aria-describedby="addon-wrapping"  onChange={handleFilter}/>
                                 <div class="btn-group">
                                     <button class="btn  btn-bg" type="button" id="searchBtn">
                                         Search

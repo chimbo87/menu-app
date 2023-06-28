@@ -12,6 +12,11 @@ const Admin = () => {
                         </Link>
                     </li>
                     <li class="list-group-item">
+                        <Link className="nav-link" to="menulist" as={Link} id="adminTxt">
+                            Menu list
+                        </Link>
+                    </li>
+                    <li class="list-group-item">
                         <Link className="nav-link" to="blogform" as={Link} id="adminTxt">
                              Add Blog
                         </Link>
@@ -26,11 +31,7 @@ const Admin = () => {
                             View Feedbacks
                         </Link>
                     </li>
-                    <li class="list-group-item">
-                        <Link className="nav-link" to="menulist" as={Link} id="adminTxt">
-                            Menu list
-                        </Link>
-                    </li>
+                    
                 </ul>
             </div>
             <div className="container" id="adminPanel">
