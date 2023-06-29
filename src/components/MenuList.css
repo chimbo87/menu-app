@@ -1,9 +1,24 @@
-#menuList{
-    background-color: aqua;
-    border: 1px solid red;
-}
+
 #menuListInput{
      display: flex; 
      justify-content: right;
       background-color: rgba(255, 254, 254, 0.374);
+}
+#menuUpdateBtn{
+    border: 1px solid rgba(202, 200, 200, 0.475);
+    padding: 0px 10px;
+    border-radius: 4px;
+    color: rgb(235, 234, 234);
+    background-color: rgba(61, 60, 60, 0.614);
+}
+#menuUpdateBtn:hover{
+    background-color: rgb(223, 221, 221);
+}
+#menuRemoveBtn{
+    border: 1px solid rgba(202, 200, 200, 0.475);
+    padding: 0px 10px;
+    border-radius: 4px;
+    color: rgb(235, 234, 234);
+    background-color: rgba(218, 165, 32, 0.799);
+    margin-left: 5px;
 }
