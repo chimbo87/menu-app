@@ -19,7 +19,7 @@
     align-items: center;
 }
 #navbtn button{
-    border: 1px solid  grey;
+    border: 1px solid rgba(218, 165, 32, 0.646);
     padding: 8px 40px;
     border-radius: 4px;
 }
@@ -64,12 +64,15 @@
     margin: 4px 4px;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid rgba(218, 165, 32, 0.215);
+   
 }
 #theLogo small{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     color: gray;
+    font-family: 'Bacasime Antique', serif;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.598);
 }
 #loginButton{
    border: 1px solid goldenrod;

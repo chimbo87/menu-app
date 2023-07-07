@@ -1,6 +1,7 @@
 import asyncHandler from 'express-async-handler';
 import User from '../models/userModel.js';
-import product from '../models/productModel.js'
+import product from '../models/productModel.js';
+import blog from '../models/blogModel.js';
 import generateToken from '../utils/generateToken.js';
 //@discription  authUser/ send token
 // route  POST /api/users/ auth
@@ -141,6 +142,34 @@ const userProducts= asyncHandler(async(req, res)=>{
  
 });
 
+const getBlogs= asyncHandler(async(req, res)=>{ 
+  try{
+      const blogs =  await blog.find({})
+      res.status(200).json(blogs);
+  }catch(error){
+      console.log(error.message)
+      res.status(500).json({message:error.message})
+  }
+});
+
+const userBlogs= asyncHandler(async(req, res)=>{ 
+  try{
+    
+      const { title, description, image} = req.body;
+      const Blog = await blog.create({
+      
+        title,
+        description,
+        image
+      });
+      res.status(200).json(Blog);
+  }catch(error){
+      console.log(error.message)
+      res.status(500).json({message:error.message})
+  }
+ 
+});
+
 export{
   authUser,
   registerUser,
@@ -149,5 +178,7 @@ export{
   getUserProfile,
   updateUserProfile,
   getProducts,
-  userProducts
+  userProducts,
+  getBlogs,
+  userBlogs
 };

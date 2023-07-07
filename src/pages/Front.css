@@ -10,12 +10,13 @@
 }
 #homeTxt{
  
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 #homeTxt h5{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: antiquewhite;
+    font-family: 'Bacasime Antique', serif;
 }
 #homeTxt p{
     color: antiquewhite;

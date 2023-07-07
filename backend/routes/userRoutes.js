@@ -8,7 +8,9 @@ import {
   getUserProfile,
   updateUserProfile,
   getProducts,
-  userProducts
+  userProducts,
+  getBlogs,
+  userBlogs
 } from "../controllers/userController.js";
 import { protect } from '../middleware/authMiddleware.js';
 
@@ -24,7 +26,8 @@ router
   .put(protect, updateUserProfile);
 router.get('/products', getProducts);
 router.post('/products', userProducts);
-
+router.get('/blogs', getBlogs);
+router.post('/blogs', userBlogs);
 
 
 export default router;

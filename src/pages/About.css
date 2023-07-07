@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Bacasime Antique', serif;
 }
 #faq span{
     width: 150px;
@@ -35,6 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Bacasime Antique', serif;
 }
 #aboutTitle span{
     width: 100px;

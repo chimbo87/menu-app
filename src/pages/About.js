@@ -87,6 +87,7 @@ function About() {
         </div>
         <div className="container" id="videoWrap">
             <video src={ourmenu} autoPlay loop muted id="menuVideo"/>
+            
         </div>
         </>
     );
