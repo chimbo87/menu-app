@@ -6,7 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     object-fit: contain;
-    filter: brightness(70%);
+    /* filter: brightness(70%); */
     height: 90vh;
 }
 #formWrap{

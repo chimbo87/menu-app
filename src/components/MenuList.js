@@ -1,5 +1,6 @@
 import "./MenuList.css";
 import { useState, useEffect } from "react";
+import { compareAsc, format } from "date-fns";
 const MenuList = () => {
   const [products, setProducts] = useState([]);
   const [filterRecords, setFilterRecords] = useState([]);
@@ -66,7 +67,7 @@ const MenuList = () => {
                   <small>R{product.price}</small>
                 </td>
                 <td>
-                  <small>{product.createdAt}</small>
+                  <small>{format(new Date(product.createdAt), "yyyy-MM-dd HH:mm")}</small>
                 </td>
                 <td>
                   <button
