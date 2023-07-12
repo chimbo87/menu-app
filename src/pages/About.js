@@ -6,7 +6,7 @@ function About() {
         <>
         <div className="container">
             <div class="row">
-                <div class="col" id="aboutText">
+                <div class="col-lg-6 md-4" id="aboutText">
                     <h4 id="aboutTitle">About Us<span></span></h4>
                     <p>There are many variations of passages of Lorem Ipsum available,
                         but the majority have suffered alteration in some form, by injected
@@ -24,7 +24,7 @@ function About() {
                         model sentence structures, to generate Lorem Ipsum which looks reasonable.
                         The generated Lorem Ipsum is therefore always free from repetition</p>
                 </div>
-                <div class="col">
+                <div class="col-lg-6 md-4">
                     <img src={home01} id="aboutImg" />
                 </div>
             </div>
@@ -87,7 +87,9 @@ function About() {
         </div>
         <div className="container" id="videoWrap">
             <video src={ourmenu} autoPlay loop muted id="menuVideo"/>
-            
+            <div id="videoWrapText">
+                <h1>Freshly <br/>Cooked<br/> For <br/>You</h1>
+            </div>
         </div>
         </>
     );

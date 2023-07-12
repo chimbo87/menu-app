@@ -1,62 +1,77 @@
-#aboutText{
-    padding: 10px;
+#aboutText {
+  padding: 10px;
 }
-#faq{
-    align-items: center;
-    font-weight: 700;
-    color: goldenrod;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Bacasime Antique', serif;
+#faq {
+  align-items: center;
+  font-weight: 700;
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Bacasime Antique", serif;
 }
-#faq span{
-    width: 150px;
-    height: 2px;
-    background-color: grey;
-    display: block;
-    margin-top: 10px;
+#faq span {
+  width: 150px;
+  height: 2px;
+  background-color: grey;
+  display: block;
+  margin-top: 10px;
 }
-#aboutImg{
-    width: 100%;
-    object-fit: contain;
-    border-radius: 4px;
+#aboutImg {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
 }
-#theAccordion{
-    margin-top: 50px;
-    padding: 50px 0px;
-    background-color: rgba(198, 195, 195, 0.153);
-    border-radius: 4px;
+#theAccordion {
+  margin-top: 50px;
+  padding: 50px 0px;
+  background-color: rgba(198, 195, 195, 0.153);
+  border-radius: 4px;
 }
 
-#aboutTitle{
-    align-items: center;
-    font-weight: 700;
-    color: goldenrod;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Bacasime Antique', serif;
+#aboutTitle {
+  align-items: center;
+  font-weight: 700;
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Bacasime Antique", serif;
 }
-#aboutTitle span{
-    width: 100px;
-    height: 2px;
-    background-color: grey;
-    display: block;
-    margin-top: 10px;
+#aboutTitle span {
+  width: 100px;
+  height: 2px;
+  background-color: grey;
+  display: block;
+  margin-top: 10px;
 }
-.accordion-button{
-    background-color: rgba(198, 195, 195, 0.153);
+.accordion-button {
+  background-color: rgba(198, 195, 195, 0.153);
 }
-#videoWrap{
-    padding: 20px 20px;
-    background-color: rgba(181, 178, 178, 0.121);
-    margin-top: 50px;
-    
+#videoWrap {
+  padding: 20px 20px;
+  background-color: rgba(181, 178, 178, 0.121);
+  margin-top: 50px;
+  height: 80vh;
 }
-#menuVideo{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    height: 70vh;
+#menuVideo {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 4px;
+  
+}
+#videoWrapText {
+
+  position: relative;
+  top: -90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#videoWrapText h1{
+    color: rgb(251, 195, 122);
+    font-family: "Bacasime Antique", serif;
+    text-align: center;
+    font-size: 70px;
 }

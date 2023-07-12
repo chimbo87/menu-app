@@ -10,6 +10,12 @@
     justify-content: center;
 
 }
+#newsIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
 #newSection{
     padding-bottom:40px;
 }
