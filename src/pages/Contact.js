@@ -56,7 +56,7 @@ function Contact() {
               <div>
                 <p>
                   20 Muti Street Johannesburg<br></br>
-                  Gauteng Province South Africa
+                  Gauteng Province<br></br> South Africa
                 </p>
               </div>
             </div>
@@ -67,9 +67,9 @@ function Contact() {
               <div>
                 <p>
                   {" "}
-                  +27 123 4567 890<br></br>
-                  +27 123 4567 890<br></br>
-                  +27 123 4567 890
+                  +27123 456 7890<br></br>
+                  +27123 456 7890<br></br>
+                  +27123 456 7890
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ function Contact() {
               </div>
               <div>
                 <p>
-                  eiinford@thegreattable.com<br></br>
+                  example@thegreattable.com<br></br>
                   support@thegreattable.com<br></br>
                   abcdefe@thegreatable.com
                 </p>
@@ -136,7 +136,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <p id="footRights">All rights reserved, theGREATtable 2023</p>
+        <p id="footRights"><span>&copy;</span> theGREATtable 2023</p>
       </div>
     </>
   );

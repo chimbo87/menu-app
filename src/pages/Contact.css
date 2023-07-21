@@ -41,6 +41,7 @@
 #contactIcon p{
     font-size: 14px;
     font-weight: 500;
+    line-height: 2rem;
 }
 #contactForm input{
    border: 1px solid grey;
