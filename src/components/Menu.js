@@ -1,37 +1,349 @@
-
 import menulogo from "../asset/menulogo.jpeg";
 import { useState, useEffect } from "react";
+import menu02 from "../asset/menu01.jpeg";
+import menu03 from "../asset/menu02.jpeg";
+import menu04 from "../asset/menu03.jpeg";
+import menu05 from "../asset/menu04.jpeg";
+import menu06 from "../asset/menu05.jpeg";
 
 import "./Menu.css";
 function Menu() {
+  const [products, setProducts] = useState([]);
+  const [filterRecords, setFilterRecords] = useState([]);
 
-
-    const [products, setProducts] = useState([]);
-    const [filterRecords, setFilterRecords] = useState([]);
-
-    const getProducts = async () => {
-
-        const response = await fetch(
-            "http://localhost:5000/api/users/products"
-        ).then((response) => response.json());
-        {
-            setProducts(response)
-            setFilterRecords(response)
-        }
-      
-        console.log('our products list:', response);
-    };
-    useEffect(() => {
-        getProducts()
-
-    }, []);
-    const handleFilter = (event) => {
-        const newData = filterRecords.filter(row => row.name.toLowerCase().includes(event.target.value.toLowerCase()))
-        setProducts(newData);
+  const getProducts = async () => {
+    const response = await fetch(
+      "http://localhost:5000/api/users/products"
+    ).then((response) => response.json());
+    {
+      setProducts(response);
+      setFilterRecords(response);
     }
-    return (
-        <>
-            <div id="menuGroup">
+
+    console.log("our products list:", response);
+  };
+  useEffect(() => {
+    getProducts();
+  }, []);
+  const handleFilter = (event) => {
+    const newData = filterRecords.filter((row) =>
+      row.name.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+    setProducts(newData);
+  };
+  return (
+    <>
+      <div id="menuHeaderText">
+        <div id="menuHeaderTextBox">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Filter All</option>
+            <option value="1">Meals</option>
+            <option value="2">Salads</option>
+            <option value="3">Diserts</option>
+            <option value="3">Drinks</option>
+          </select>
+        </div>
+        <div id="menuHeaderTextBox">
+          <div class="input-group flex-nowrap" id="menuHeaderTextBoxInput">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search dish.."
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+          <div id="menuHeaderTextBoxIcon">
+            <i class="bx bx-shopping-bag"></i>
+            <span>2</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu06} />
+
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu02} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu03} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu04} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu05} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu03} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu02} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu05} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu03} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu04} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu05} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div id="theMenuCardBox">
+            <img src={menu02} />
+            <div id="theMenuCardBoxWrap">
+              <p>MEALS</p>
+
+              <small>Chicken, Salads and Fries</small>
+
+              <p>$4.50</p>
+
+              <div id="theMenuCardBoxBtn">
+                <button id="theMenuCardBoxBtnA">
+                  <small>Add to Cart</small>
+                </button>
+                <button id="theMenuCardBoxBtnB">
+                  <small>Read more</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              1
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              2
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              3
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      {/* <div id="menuGroup">
                 <div class="container" id="menuInputs">
                     <div class="row" id="menuInputsWrap">
 
@@ -82,7 +394,7 @@ function Menu() {
                                         products.map((product) => {
                                             return(
                                            
-                                            <div class="col-md-4" id="productBox">
+                                            <div class="col-md-3" id="productBox">
                                                 <div id="productWrap">
                                                     <img src={product.image} />
                                                     <div><h5>{product.title}</h5></div>
@@ -142,9 +454,9 @@ function Menu() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
-    );
+            </div> */}
+    </>
+  );
 }
 
 export default Menu;

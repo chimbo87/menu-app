@@ -1,75 +1,109 @@
-#dashboardLayout{
-    display: flex;
-}
-#itemsQty:hover{
-    background-color: rgba(197, 152, 38, 0.728);
-}
-#offcanvasScrolling{
-    background-color: rgba(249, 249, 249, 0.998);
-    max-width: 250px;
-    box-shadow: 2px 2px 12px grey;
-}
-#canvasList{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    margin: 5px 5px;
-}
-#canvasList H4{
-   color: goldenrod;
-   margin-top: 30px;
-}
-#offcanvasResponsive{
-    max-width: 250px;
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-#canvasList ul{
-   padding: 5px 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
- 
-    justify-content: center;
-   
+.sidebar {
+  width: 250px;
+  min-height: 100%;
+  background-color: #725310;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#canvasList ul li{
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  padding-right: 25px;
+}
+.sidebar ul li {
+  list-style: none;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-top: 1px solid #ffffff38;
+  width: 100%;
+  cursor: pointer;
+}
+.sidebar ul li:hover {
+  background-color: #ffffff1a;
+  border-top: none;
+}
+#dashboardLinksNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dashboardLinksNav p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+#dashboardLinksNav p span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #725310;
+  width: 25px;
+  height: 25px;
+  background-color: antiquewhite;
+  border: 1px solid #0000007b;
+  border-radius: 50%;
+  position: relative;
+  left: -20px;
+  top: -8px;
+}
+#dashboardLinksNav p i {
+  font-size: 20px;
+  color: antiquewhite;
+  margin-right: 10px;
+}
 
-    border-radius: 4px;
-    list-style: none;
-    padding: 10px 5px;
-    width: 100%;
-    cursor: pointer;
-    margin: 8px 0px;
-    display: flex;
-    font-weight: 500;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(216, 212, 212, 0.58);
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
 }
-#canvasList ul li:hover{
-    background-color: rgba(218, 165, 32, 0.454);
+
+.sidebar-open {
+  width: 80px;
 }
-#canvasList ul li:active{
-    background-color: rgba(218, 165, 32, 0.454);
+
+.main-content.sidebar-open {
+  margin-left: 80px;
 }
-#dashboardLinks{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid rgba(128, 128, 128, 0.228);
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  .main-content {
+    margin-left: 80px;
+  }
+
+  .sidebar-open {
+    width: 250px;
+  }
+
+  .main-content.sidebar-open {
+    margin-left: 250px;
+  }
 }
-#dashboardLinks i{
-    color: rgba(218, 165, 32, 0.653);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    cursor: pointer;
-    margin: 5px 5px;
-}
-#dashboardLinks i:hover{
-    color: rgba(134, 105, 29, 0.653);
-}
+
+/* Additional styling as needed */

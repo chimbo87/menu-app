@@ -24,6 +24,7 @@ router.post('/logout', logoutUser);
 router
   .route('/profile').get(protect, getUserProfile)
   .put(protect, updateUserProfile);
+  
 router.get('/products', getProducts);
 router.post('/products', userProducts);
 router.get('/blogs', getBlogs);

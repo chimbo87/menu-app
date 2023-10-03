@@ -1,10 +1,11 @@
 #newIcon{
     max-width: 200px;
-    height: auto;
+    height: 50px;
     margin: 10px 20px;
+    cursor: pointer;
 }
 #iconWrap{
-    margin: 30px 0px;
+    margin: 10px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,12 +42,20 @@
 .newsletterBox h4{
     text-align: center;
     padding-bottom: 10px;
-    color: goldenrod;
+    color:  #b7731f;
     font-family: 'Bacasime Antique', serif;
 }
 #basic-addon2{
-    background-color: rgba(218, 165, 32, 0.336);
+    background-color: #daa52056;
     cursor: pointer;
     font-weight: 500;
     font-size: 20px;
+}
+#theSubsribeInput button{
+   padding: 8px 30px;
+   border: none;
+   background-color: grey;
+   color: white;
+   border-radius: 4px;
+   margin-left: 5px;
 }

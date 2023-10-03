@@ -1,6 +1,6 @@
 import "./Front.css";
 import front01 from "../asset/front01.jpg";
-import front02 from "../asset/front02.jpg";
+import front02 from "../asset/menu.mp4";
 import front03 from "../asset/front03.jpg"
 // import front04 from "../asset/front04.jpg"
 // import front05 from "../asset/front05.jpg"
@@ -18,7 +18,7 @@ function Front() {
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src={front01} class="d-block w-100" alt="..." id="homeImg" />
+                    <video src={front02} autoPlay loop muted id="homeImg" />
                         <div class="carousel-caption d-none d-md-block" id="homeTxt">
                             <h5>Restaurant and Bar</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,
@@ -28,7 +28,8 @@ function Front() {
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src={front02} class="d-block w-100" alt="..." id="homeImg" />
+                  
+                    <img src={front01} class="d-block w-100" alt="..." id="homeImg" />
                         <div class="carousel-caption d-none d-md-block"id="homeTxt">
                             <h5>Dinning and Pub</h5>
                             <p>There are many variations of passages of Lorem Ipsum available,

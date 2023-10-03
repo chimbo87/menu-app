@@ -14,16 +14,14 @@ function Newsletter() {
       </div>
       <div className="newsletterBox">
         <h4>Please sign-up for Newsletter</h4>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" id="theSubsribeInput">
           <input
-            class="form-control form-control-lg"
             type="text"
-            placeholder="Enter your email"
-            aria-label=".form-control-lg example"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
           />
-          <span class="input-group-text" id="basic-addon2">
-            Sign-Up
-          </span>
+          <button>Subscribe</button>
         </div>
       </div>
     </div>
