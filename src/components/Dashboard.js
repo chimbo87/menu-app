@@ -142,7 +142,6 @@ const Dashboard = () => {
               id="dashboardLinksNav"
             >
               <p>
-                
                 <i class="bx bx-bowl-hot"></i>Our Menu
               </p>
             </Link>
@@ -177,7 +176,7 @@ const Dashboard = () => {
           <li>
             <Link
               className="nav-link"
-              to="transaction"
+              to="support"
               as={Link}
               id="dashboardLinksNav"
             >
@@ -189,7 +188,7 @@ const Dashboard = () => {
           <li>
             <Link
               className="nav-link"
-              to="transaction"
+              to="settings"
               as={Link}
               id="dashboardLinksNav"
             >
@@ -202,12 +201,11 @@ const Dashboard = () => {
           <li>
             <Link
               className="nav-link"
-              to="transaction"
+              to="notifications"
               as={Link}
               id="dashboardLinksNav"
             >
               <p>
-              
                 <i class="bx bx-bell"></i> <span>3</span>Notifications
               </p>
             </Link>
@@ -225,9 +223,6 @@ const Dashboard = () => {
               </p>
             </Link>
           </li>
-
-          
-        
         </ul>
       </div>
       <div className={`main-content ${isSidebarOpen ? "sidebar-open" : ""}`}>

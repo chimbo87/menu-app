@@ -1,5 +1,5 @@
-import menulogo from "../asset/menulogo.jpeg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import menu02 from "../asset/menu01.jpeg";
 import menu03 from "../asset/menu02.jpeg";
 import menu04 from "../asset/menu03.jpeg";
@@ -8,6 +8,7 @@ import menu06 from "../asset/menu05.jpeg";
 
 import "./Menu.css";
 function Menu() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [filterRecords, setFilterRecords] = useState([]);
 
@@ -53,7 +54,13 @@ function Menu() {
               aria-describedby="addon-wrapping"
             />
           </div>
-          <div id="menuHeaderTextBoxIcon">
+
+          <div
+            id="menuHeaderTextBoxIcon"
+            onClick={() => {
+              navigate("/dashboard/cart");
+            }}
+          >
             <i class="bx bx-shopping-bag"></i>
             <span>2</span>
           </div>
@@ -75,7 +82,12 @@ function Menu() {
                 <button id="theMenuCardBoxBtnA">
                   <small>Add to Cart</small>
                 </button>
-                <button id="theMenuCardBoxBtnB">
+                <button
+                  id="theMenuCardBoxBtnB"
+                  onClick={() => {
+                    navigate("/dashboard/productdescription");
+                  }}
+                >
                   <small>Read more</small>
                 </button>
               </div>
@@ -216,7 +228,13 @@ function Menu() {
 
               <small>Chicken, Salads and Fries</small>
 
-              <p>$4.50</p>
+              <div id="menuPrice">
+                {" "}
+                <p>$4.50</p>{" "}
+                <i>
+                  <p id="menuDiscount">$5.00</p>
+                </i>
+              </div>
 
               <div id="theMenuCardBoxBtn">
                 <button id="theMenuCardBoxBtnA">

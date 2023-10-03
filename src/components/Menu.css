@@ -7,19 +7,34 @@
 #theMenuCardBoxWrap{
     display: flex;
     flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+#theMenuCardBoxWrap p{
+  font-weight: 600;
+}
+#menuPrice{
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+#menuDiscount{
+    text-decoration: line-through;
+    color: #725310;
 }
 #theMenuCardBox img {
   width: 100%;
   height: 150px;
   object-fit: cover;
+  border-radius: 4px 4px 0px 0px;
 }
 
 #theMenuCardBoxBtn {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 2px;
   width: 100%;
 }

@@ -1,0 +1,15 @@
+#menuDishPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin-top: 100px;
+}
+#dishDescription{
+    border: 1px solid black;
+
+}
+#dishDescriptionBox img{
+   width: 100%;
+   object-fit: cover;
+   height: inherit;
+}
