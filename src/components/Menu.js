@@ -72,7 +72,7 @@ function Menu() {
             <img src={menu06} />
 
             <div id="theMenuCardBoxWrap">
-              <p>MEALS</p>
+              <p>SALAD</p>
 
               <small>Chicken, Salads and Fries</small>
 

@@ -20,6 +20,7 @@
   justify-content: center;
 }
 .sidebar ul {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -28,18 +29,19 @@
   padding-right: 25px;
 }
 .sidebar ul li {
+  margin-top: 5px;
   list-style: none;
-  margin-top: 4px;
   display: flex;
   align-items: center;
   justify-content: start;
-  border-top: 1px solid #ffffff38;
+  border: 1px solid #ffffff38;
+border-radius: 4px;
+  padding-left: 10px;
   width: 100%;
   cursor: pointer;
 }
 .sidebar ul li:hover {
   background-color: #ffffff1a;
-  border-top: none;
 }
 #dashboardLinksNav {
   display: flex;

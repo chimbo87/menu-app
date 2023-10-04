@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Header.css";
 import menulogo from "../asset/menulogo.jpeg";
+import user from "../asset/user.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../features/authSlice";
@@ -92,7 +93,7 @@ function Header() {
             </div>
  */}
       <nav class="navbar navbar-expand-lg " id="navigationBar">
-        <div class="container">
+        <div class="container-fluid">
           <div>
             <Link className="nav-link" to="/" as={Link}  id="navigationBarLogo">
               <div>
@@ -131,10 +132,12 @@ function Header() {
                       aria-expanded="false"
                       id="btnUserInfo"
                     >
+                       <img src={user} id="userAvatar"></img>
                       {userInfo.name}
                     </button>
                     <ul class="dropdown-menu">
                       <li>
+                       
                         <a class="dropdown-item" href="#">
                           Profile
                         </a>
